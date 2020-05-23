@@ -1,0 +1,50 @@
+{
+    "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+    ],
+    "id": "362ff2749bfb11eabbd5600308a4105a",
+    "meta": {
+        "resourceType": "User",
+        "created": "2010-01-23T04:56:22Z",
+        "lastModified": "2020-05-13T04:42:34Z"
+    },
+    "username": "gaa041@uib.no",
+    "externalId": "100000000234",
+    "name": {
+        "formatted": "Gisle Aas",
+        "familyName": "Aas",
+        "givenName": "Gisle"
+    },
+    "displayName": "Gisle Aas",
+    "profileUrl": "https://www.uib.no/users/uib/gaa041",
+    "active": true,
+    "emails": [
+        {
+            "value": "gisle.aas@uib.no",
+            "type": "work"
+        }
+    ],
+    "phoneNumbers": [
+        {
+            "value": "+4793241450",
+            "type": "work"
+        }
+    ],
+    "entitlements": [
+    ],
+    "roles": [
+        "staff", "student"
+    ],
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "employeeNumber": "333355",
+        "costCenter": "221013",
+        "organization": "University of Bergen",
+        "division": "IT-division",
+        "department": "Seksjon for applikasjoner",
+        "manager": {
+            "id": "452ff2749bfb11eabbd5600308a4105a",
+            "displayName": "Nina Kaurel"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "schemas":["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+    "totalResults": 1,
+    "Resources": [
+        {
+            "id": "362ff2749bfb11eabbd5600308a4105a"
+        }
+    ]
+}
