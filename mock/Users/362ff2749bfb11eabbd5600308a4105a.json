@@ -7,7 +7,7 @@
     "meta": {
         "resourceType": "User",
         "created": "2010-01-23T04:56:22Z",
-        "lastModified": "2020-05-13T04:42:34Z"
+        "lastModified": "2020-06-22T06:42:34Z"
     },
     "username": "gaa041@uib.no",
     "externalId": "fe2ff2749bfb11eabbd5600308a4105a",
@@ -23,12 +23,20 @@
         {
             "value": "gisle.aas@uib.no",
             "type": "work"
+        },
+        {
+            "value": "gaa041@uib.no",
+            "type": "internal"
         }
     ],
     "phoneNumbers": [
         {
             "value": "+4793241450",
             "type": "work"
+        },
+        {
+            "value": "+4793241450",
+            "type": "mobile"
         }
     ],
     "entitlements": [
