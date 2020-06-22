@@ -1,0 +1,31 @@
+{
+    "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User"
+    ],
+    "id": "363fe2749bfb11eabbc5600408a4106b",
+    "meta": {
+        "resourceType": "User",
+        "created": "2017-02-20T14:56:22Z",
+        "lastModified": "2020-06-22T06:42:34Z"
+    },
+    "username": "gisle",
+    "externalId": "fe2ff2749bfb11eabbd5600308a4105a",
+    "name": {
+        "formatted": "Gisle Aas",
+        "familyName": "Aas",
+        "givenName": "Gisle"
+    },
+    "displayName": "Gisle Aas (admin)",
+    "active": true,
+    "emails": [
+        {
+            "value": "gisle@uib.no",
+            "type": "internal"
+        }
+    ],
+    "entitlements": [
+    ],
+    "roles": [
+        "admin"
+    ]
+}
