@@ -29,6 +29,27 @@ The following fields should be provided on user objects.
 * `.enterprise.employeeNumber`
 * `.no:edu:scim:user.eduPersonPrincipalName`
 
+## Events
+
+Updates to the objects exposed in this API is signaled by events to the IntArk MQ
+and follows the proposed
+[SCIM Event Extension](https://tools.ietf.org/html/draft-hunt-scim-notify-00) structure.
+Since IntArk prefers shallow messages, we don't include the `.values` attribute.
+
+These events are encoded in JSON and looks like this:
+
+```
+{
+  "schemas: ["urn:ietf:params:scim:schemas:notify:2.0:Event"],
+  "resourceUris": [
+     "https://gw-uib.intark.uh-it.no/iga/scim/v2/Users/362ff2749bfb11eabbd5600308a4105a"
+  ],
+  "type":"MODIFY",
+  "attributes": ["emails", "no:edu:user"],
+}
+```
+
+
 ## Field name specification
 
 ### User `.id`
