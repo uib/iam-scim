@@ -85,6 +85,19 @@ For the primary account this is the same as `.name.formatted`.
 For other accounts this can be any string that is suitable for
 explaining the purpose of this account.
 
+### User `.name`
+
+This is the name of the owner of this account.  This attribute is
+mandatory for primary accounts.  Example value:
+
+```
+{
+    "formatted": "Gisle Aas",
+    "familyName": "Aas",
+    "givenName": "Gisle"
+}
+```
+
 ### User `.active`
 
 Boolean value which is set to `false` for accounts that should be disabled.
