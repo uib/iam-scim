@@ -1,7 +1,8 @@
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "no:edu:person"
     ],
     "id": "362ff2749bfb11eabbd5600308a4105a",
     "meta": {
@@ -54,5 +55,9 @@
             "id": "452ff2749bfb11eabbd5600308a4105a",
             "displayName": "Nina Kaurel"
         }
+    },
+    "no:edu:user": {
+        "eduPersonPrincipalName": "gaa041@uib.no",
+        "userPrincipalName": "Gisle.Aas@uib.no"
     }
 }
