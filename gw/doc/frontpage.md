@@ -17,7 +17,7 @@ Suggested user attribute mappings:
 
 ## Events
 
-Updates to the objects exposed in this API is signaled by evenst to the IntArk MQ and follows the proposed "[SCIM Event Extension](https://tools.ietf.org/html/draft-hunt-scim-notify-00) structure. These events look like this:
+Updates to the objects exposed in this API is signaled by events to the IntArk MQ and follows the proposed [SCIM Event Extension](https://tools.ietf.org/html/draft-hunt-scim-notify-00) structure. These events look like this:
 
 ```
 {
