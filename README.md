@@ -26,4 +26,4 @@ User object fields:
 * `.name.familyName`
 * `.emails[].type == "work"` with a corresponding `.value`
 * `.enterprise.employeeNumber`
-* `.no:edu:person.eduPersonPrincipalName`
+* `.no:edu:scim:user.eduPersonPrincipalName`
