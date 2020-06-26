@@ -4,7 +4,7 @@ This repo defines the proposed [SCIM](https://tools.ietf.org/html/rfc7643) inter
 implementations in the Norwegian higher education sector. The main use case for this API is to provide
 for IntArk-style provisioning of user accounts.
 
-A functional mockup of this API is available from
+A functional mock-up of this API is available from
 [UiBs API Gateway](https://api-uib.intark.uh-it.no/#!/apis/91a73d99-d9b2-452a-a73d-99d9b2e52a9a/detail).
 
 The standard paths of SCIM are `/Users`, `/Users/{id}`, `/Groups` and `/Groups/{id}`. We only care for
@@ -14,7 +14,7 @@ the user endpoints for now.
 
 This section defines what the lazy implementer might get away with.
 
-* Implement `/Users` with ability to page throgh the available accounts. An implementation might choose to just expose the Feide-enabled accounts.
+* Implement `/Users` with ability to page through the available accounts. An implementation might choose to just expose the Feide-enabled accounts.
 * Implement `/Users?filter=userName eq "..."` to make it possible to look up a specific account
 * Implement `/Users/{id}` fetch data for the specified account
 * Make `/Groups` functional, but it's fine for it to just return the empty `ListResponse`.
