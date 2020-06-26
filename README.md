@@ -85,6 +85,12 @@ Boolean value which is set to `false` for accounts that should be disabled.
 Users should not be able to login using this account. Any active session
 using this account should also be terminated.
 
+### User `.externalId`
+
+The identifier of the person that owns this account. It is preferable that
+`/Persons/{externalId}` fetches information on the person.  For UH-IAM this
+will be the UH-ID (another UUID value).
+
 ### User `.emails`
 
 The email addresses associated with this account. The email addresses are
