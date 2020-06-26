@@ -79,6 +79,12 @@ The format of the username value should be `{local-username}@{fqdn}`.
 
 Example value: `gaa041@uib.no`
 
+### User `.displayName`
+
+For the primary account this is the same as `.name.formatted`.
+For other accounts this can be any string that is suitable for
+explaining the purpose of this account.
+
 ### User `.active`
 
 Boolean value which is set to `false` for accounts that should be disabled.
@@ -121,6 +127,22 @@ but we shortened it in this description to `.enterprise`.
 
 This is the DFØ ID for the employee that owns this account.
 This field isn't present for student-only accounts.
+
+### User `.enterprise.manager`
+
+For primary accounts, this is set to reference the primary user account of the manager of the person that owns this account.
+All non-primary accounts should set this to reference the primary account of their owner.
+
+Additional information on the manager can be obtained from `/Users/{enterprise.manager.id}`.
+The `.enterprise.manager.displayName` is just a copy of the `.displayName` of the manager account itself.
+
+Example value:
+```
+{
+    "id": "452ff2749bfb11eabbd5600308a4105a",
+    "displayName": "Nina Kaurel"
+}
+```
 
 ### User `.no:edu:scim:user`
 
