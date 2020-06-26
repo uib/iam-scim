@@ -20,7 +20,7 @@ This section defines what the lazy implementer might get away with.
 * Make `/Groups` functional, but it's fine for it to just return the empty `ListResponse`.
 * Post MQ message when a user object is created, modified or deleted.
 
-The following fields should be provided on user objects.
+The following fields should minimally be provided on user objects.
 
 * `.id`
 * `.meta`
