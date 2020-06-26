@@ -50,11 +50,31 @@ Boolean value which is set to `false` for accounts that should be disabled.
 Users should not be able to login using this account. Any active session
 using this account should also be terminated.
 
+### User `.emails`
+
+The email addresses associated with this account. The email addresses are
+tagged with a type field.  The tag "work" is used for the main email address,
+even for students.
+
+Example value:
+```
+[
+    {
+        "type": "work",
+        "value": "Gisle.Aas@uib.no"
+    },
+    {
+        "type": "internal",
+        "value": "gaa041@uib.no"
+    },
+]
+```
+
 ### User `.enterprise`
 
 This is the standard SCIM enterprise extension object.
-The real name of this attribute is `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User`
-but we shorten it in this description to `.enterprise`.
+The real full name of this attribute is `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User`
+but we shortened it in this description to `.enterprise`.
 
 ### User `.enterprise.employeeNumber`
 
