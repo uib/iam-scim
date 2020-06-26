@@ -12,14 +12,18 @@ the user endpoints for now.
 
 ## Minimal implementation requirements
 
-* Implement `/Users` with ability to page throgh the available accounts
+This section defines what the lazy implementer might get away with.
+
+* Implement `/Users` with ability to page throgh the available accounts. An implementation might choose to just expose the Feide-enabled accounts.
 * Implement `/Users?filter=userName eq "gaa041@uib.no"` to make it possible to look up a specific account
 * Implement `/Users/{id}` fetch data for the specified account
+* Make `/Groups` functional, but it's fine for it to just return the empty `ListResponse`.
 * Post MQ message when a user object is created, modified or deleted.
 
 The following fields should be provided on user objects.
 
 * `.id`
+* `.meta`
 * `.username`
 * `.active`
 * `.name.formatted`
@@ -48,6 +52,16 @@ These events are encoded in JSON and looks like this:
   "attributes": ["emails", "no:edu:user"],
 }
 ```
+
+## Recommended features
+
+This section expands on the minimal requirements and define some features that
+might be useful and that we prefer all implementations to consider.
+
+* Implement functional `/Groups` and `/Groups/{id}` that expose the same groups available from LDAP/AD.
+* More attributes on user objects, especially `.phoneNumbers` and `.enterprise.manager`.
+* Search for users by name and other attributes.
+* Implement `/Persons` and `/Persons/{id}` endpoints. A schema for person objects is yet to be defined.
 
 
 ## Field name specification
