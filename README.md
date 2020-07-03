@@ -101,6 +101,11 @@ The format of the username value should be `{local-username}@{fqdn}`.  SCIM allo
 bare usernames, as well as usernames qualified with a domain. For consistency we always
 return fully qualified names.
 
+This attribute is unique; no other User object will have the same `.username`.
+
+The `{local-username}` part must fully match the regexp pattern `/[a-z][a-z0-9]{0,11}/`
+and the full name will only contain lower case letters.
+
 Example value: `gaa041@uib.no`
 
 ### User `.displayName`
