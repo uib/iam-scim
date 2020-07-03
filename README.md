@@ -251,7 +251,7 @@ The Feide-ID of this user account is specified in this field.
 This field is absent for accounts not available through Feide.
 
 It will have the same value as the `eduPersonPrincipalName` attribute
-in LDAP and specified [norEdu*](https://docs.feide.no/reference/schema/attributes/edupersonprincipalname.html#saml-attribute-edupersonprincipalname).
+in LDAP and specified [norEdu\*](https://docs.feide.no/reference/schema/attributes/edupersonprincipalname.html#saml-attribute-edupersonprincipalname).
 
 Example value: `gaa041@uib.no`
 
@@ -271,18 +271,26 @@ This is just a list of things we might want to specify or figure out.
 
 * Should we add a rationale for why SCIM was considered?
 * Is there a way to find if a User object is the primary account of person?
-  Could the presense of `.eduPersonPrincipal.name` be it?
+  Could the presense of `.eduPersonPrincipalName` be it?
 * Is there any value in using the `.enterprise` extension here?
   We could just add the attributes we need to the `.no:edu:scim:user` object.
-* Is `no:edu:scim:user` a suitable extension scheme name?
+* Is `"no:edu:scim:user"` a suitable extension scheme name?
+* Is "work" a suitable standard type name for email and phone numbers?
 * Should we add a space after the country code in phone numbers?
-* Should we use fully qualified user names?
+* Should we continue to use fully qualified user names?
 * Is it appropriate or misuse to use the `.enterprise.manager.id` attribute
   for non-primary accounts to reference the primary account of the owner?
   Should there be a better way to do this?
-* Should other norEdu* attributes be specified?
 * Language specific names of organisation (`.enterprise.organization`, `.enterprise.division`, ...)
   and what language to use for the standard attributes.
-* Should other LDAP attributes be represented
+* Should other norEdu\* attributes be specified?
+* Should other LDAP attributes be represented?
 * Should we specify a use of `.entitlements`?
 * Should we specify a scheme for `Person` objects?
+  If we can identify the primary account there might not be any reason
+  to add this, as all required information is available in the User objects.
+  Even [MS Graph](https://docs.microsoft.com/en-us/graph/api/resources/person)
+  seem to have added person objects.
+* Is there other use cases of the Cerebrum or SEBRA API that can easily
+  be covered by extending this API?
+* Does SCIM provide a way to filter attributes returned?
