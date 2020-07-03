@@ -162,8 +162,8 @@ Example value:
 ### User `.phoneNumbers`
 
 The public phone numbers associated with this account.  The phone numbers are
-tagged with a type filed. The tag "work" used for prefered contact option.  The
-tag "mobile" can be used when the mobile phone is not the prefered option.  The
+tagged with a type filed. The tag "work" used for preferred contact option.  The
+tag "mobile" can be used when the mobile phone is not the preferred option.  The
 phone numbers themselves are represented in the full international format
 prefixed with "+" and without internal spaces or dashes.
 
@@ -188,9 +188,9 @@ should use this for anything.
 ### User `.roles`
 
 List of business roles associated with this user.
-Apply the tags "staff", "guest" or "student" when approripate. This
+Apply the tags "staff", "guest" or "student" when appropriate. This
 list of roles might be extended later.
-Universites can introduce private roles by prefixing them with
+Universities can introduce private roles by prefixing them with
 their reverse domain name, e.g. "no.uib.breiflabb".
 
 ### User `.enterprise`
@@ -221,7 +221,7 @@ The name of primary faculty that the owner of this account belongs to.
 
 ### User `.enterprise.departement`
 
-The name of primary intitute that the owner of this account belongs to.
+The name of primary institute that the owner of this account belongs to.
 
 ### User `.enterprise.manager`
 
