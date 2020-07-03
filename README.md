@@ -186,7 +186,7 @@ List of business roles associated with this user.
 Apply the tags "staff", "guest" or "student" when approripate. This
 list of roles might be extended later.
 Universites can introduce private roles by prefixing them with
-their reverse domain name, e.g. "no.uib.breiflab".
+their reverse domain name, e.g. "no.uib.breiflabb".
 
 ### User `.enterprise`
 
