@@ -264,3 +264,25 @@ It would be a good idea for this value to be the same as `.eduPersonPrincipalNam
 but UiB has unfortunately diverged.
 
 Example value: `Gisle.Aas@uib.no`
+
+## Open questions
+
+This is just a list of things we might want to specify or figure out.
+
+* Should we add a rationale for why SCIM was considered?
+* Is there a way to find if a User object is the primary account of person?
+  Could the presense of `.eduPersonPrincipal.name` be it?
+* Is there any value in using the `.enterprise` extension here?
+  We could just add the attributes we need to the `.no:edu:scim:user` object.
+* Is `no:edu:scim:user` a suitable extension scheme name?
+* Should we add a space after the country code in phone numbers?
+* Should we use fully qualified user names?
+* Is it appropriate or misuse to use the `.enterprise.manager.id` attribute
+  for non-primary accounts to reference the primary account of the owner?
+  Should there be a better way to do this?
+* Should other norEdu* attributes be specified?
+* Language specific names of organisation (`.enterprise.organization`, `.enterprise.division`, ...)
+  and what language to use for the standard attributes.
+* Should other LDAP attributes be represented
+* Should we specify a use of `.entitlements`?
+* Should we specify a scheme for `Person` objects?
