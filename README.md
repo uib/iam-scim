@@ -69,6 +69,8 @@ These events are encoded in JSON and looks like this:
 }
 ```
 
+Example topic for the message is "no.uib.iga.scim.user.modify".
+
 ## Recommended features
 
 This section expands on the minimal requirements and define some features that
