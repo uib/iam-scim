@@ -10,6 +10,22 @@ A functional mock-up of this API is available from
 The standard paths of SCIM are `/Users`, `/Users/{id}`, `/Groups` and `/Groups/{id}`. We only care for
 the user endpoints for now.
 
+## Persons vs Accounts
+
+SCIM is basically designed as a REST-style replacement for LDAP.  As such it
+has the same ambiguity on what the User objects represents — are they people or
+are they accounts that belong to people (and other entities).
+
+Here we declare them to be _accounts_ and we suggest that we might extend our
+SCIM implementation with _Person_ objects later. In this model a person might be
+the owner of multiple accounts.  We also consider one of these accounts as this
+person's primary account.  The User objects of the primary account will have a
+mix of attributes describing the account and attributes describing the person.
+
+We might also have accounts that doesn't belong to any person. This might
+be accounts representing devices, applications or other systems.
+
+
 ## Minimal implementation requirements
 
 This section defines what the lazy implementer might get away with.
