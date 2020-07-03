@@ -43,6 +43,7 @@ The following fields should minimally be provided on user objects.
 * `.meta`
 * `.username`
 * `.active`
+* `.displayName`
 * `.name.formatted`
 * `.name.givenName`
 * `.name.familyName`
