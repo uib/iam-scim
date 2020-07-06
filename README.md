@@ -277,6 +277,8 @@ This is just a list of things we might want to specify or figure out.
 * Is there any value in using the `.enterprise` extension here?
   We could just add the attributes we need to the `.no:edu:scim:user` object.
 * Is `"no:edu:scim:user"` a suitable extension scheme name?
+  The spec suggest that "urn:ietf:params:scim:schemas:no:edu:user" might
+  be more appropriate.
 * Is "work" a suitable standard type name for email and phone numbers?
 * Should we add a space after the country code in phone numbers?
 * Should we continue to use fully qualified user names?
