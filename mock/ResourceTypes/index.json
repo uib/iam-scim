@@ -1,0 +1,8 @@
+{
+    "schemas":["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+    "totalResults": 2,
+    "Resources": [
+        { "id": "User" },
+        { "id": "Group" }
+    ]
+}
