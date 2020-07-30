@@ -151,14 +151,9 @@ even for students.
 Example value:
 ```
 [
-    {
-        "type": "work",
-        "value": "Gisle.Aas@uib.no"
-    },
-    {
-        "type": "internal",
-        "value": "gaa041@uib.no"
-    },
+    { "type": "work",     "value": "Gisle.Aas@uib.no" },
+    { "type": "internal", "value": "gaa041@uib.no" },
+    { "type": "vanity",   "value": "gisle@uib.no" }
 ]
 ```
 
@@ -174,8 +169,8 @@ Example value:
 
 ```
 [
-    { "value": "+4793241450", "type": "work"   },
-    { "value": "+4793241450", "type": "mobile" }
+    { "type": "work",    "value": "+4793241450" },
+    { "type": "mobile",  "value": "+4793241450" }
 ]
 ```
 
