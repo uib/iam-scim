@@ -68,7 +68,7 @@ These events are encoded in JSON and looks like this:
      "https://gw-uib.intark.uh-it.no/iga/scim/v2/Users/362ff2749bfb11eabbd5600308a4105a"
   ],
   "type":"MODIFY",
-  "attributes": ["emails", "no:edu:scim:user"],
+  "attributes": ["emails", "name.givenName", "no:edu:scim:user:userPrincipalName"],
 }
 ```
 
@@ -298,7 +298,6 @@ This is just a list of things we might want to specify or figure out.
   to add this, as all required information is available in the User objects.
   Even [MS Graph](https://docs.microsoft.com/en-us/graph/api/resources/person)
   seem to have added person objects.
-* How to specify that a specific extension attribute has been updated in the event?
 * Is there other use cases of the Cerebrum or SEBRA API that can easily
   be covered by extending this API?
 * Does SCIM provide a way to filter attributes returned?
