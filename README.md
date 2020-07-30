@@ -161,8 +161,10 @@ Example value:
 
 The public phone numbers associated with this account.  The phone numbers are
 tagged with a type filed. The tag "work" used for preferred contact option.  The
-tag "mobile" can be used when the mobile phone is not the preferred option.  The
-phone numbers themselves are represented in the full international format
+tag "mobile" can be used when the mobile phone is not the preferred option.
+The tag "secure" is a phone suitable for use as 2-faktor verification (via SMS).
+
+The phone numbers themselves are represented in the full international format
 prefixed with "+" and without internal spaces or dashes.
 
 Example value:
@@ -170,6 +172,7 @@ Example value:
 ```
 [
     { "type": "work",    "value": "+4793241450" },
+    { "type": "secure",  "value": "+4793241450" },
     { "type": "mobile",  "value": "+4793241450" }
 ]
 ```
