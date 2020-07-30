@@ -298,6 +298,7 @@ This is just a list of things we might want to specify or figure out.
   to add this, as all required information is available in the User objects.
   Even [MS Graph](https://docs.microsoft.com/en-us/graph/api/resources/person)
   seem to have added person objects.
+* How to specify that a specific extension attribute has been updated in the event?
 * Is there other use cases of the Cerebrum or SEBRA API that can easily
   be covered by extending this API?
 * Does SCIM provide a way to filter attributes returned?
