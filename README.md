@@ -212,17 +212,17 @@ Not sure if this is useful.
 
 ### User `.enterprise.organization`
 
-The name of the organisation that the owner of this account belongs to.
+The Norwegian name of the organisation that the owner of this account belongs to.
 For staff and students this will be the name of the school.  For guest this
 might be the name of the organisation they come from.
 
 ### User `.enterprise.division`
 
-The name of primary faculty that the owner of this account belongs to.
+The Norwegian name of primary faculty that the owner of this account belongs to.
 
 ### User `.enterprise.departement`
 
-The name of primary institute that the owner of this account belongs to.
+The Norwegian name of primary institute that the owner of this account belongs to.
 
 ### User `.enterprise.manager`
 
