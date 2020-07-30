@@ -210,7 +210,7 @@ This field isn't present for student-only accounts.
 This is the account number used for expenses related to the owner of this account.
 Not sure if this is useful.
 
-### User `.enterprise.organization
+### User `.enterprise.organization`
 
 The name of the organisation that the owner of this account belongs to.
 For staff and students this will be the name of the school.  For guest this
