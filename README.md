@@ -68,7 +68,7 @@ These events are encoded in JSON and looks like this:
      "https://gw-uib.intark.uh-it.no/iga/scim/v2/Users/362ff2749bfb11eabbd5600308a4105a"
   ],
   "type":"MODIFY",
-  "attributes": ["emails", "no:edu:user"],
+  "attributes": ["emails", "no:edu:scim:user"],
 }
 ```
 
