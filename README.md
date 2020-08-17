@@ -166,7 +166,7 @@ Example value:
 The public phone numbers associated with this account.  The phone numbers are
 tagged with a type filed. The tag "work" used for preferred contact option.  The
 tag "mobile" can be used when the mobile phone is not the preferred option.
-The tag "secure" is a phone suitable for use as 2-faktor verification (via SMS).
+The tag "secure" is a phone suitable for use as 2nd-factor verification (via SMS).
 
 The phone numbers themselves are represented in the full international format
 prefixed with "+" and without internal spaces or dashes.
@@ -246,7 +246,7 @@ Example value:
 
 ### User `.no:edu:scim:user`
 
-This attibute contains the object where we extend the user object with
+This attribute contains the object where we extend the user object with
 fields specific to Norwegian UH domain. The string is also the name
 of a schema and should be found in the `.schemas` attribute as well.
 
@@ -276,7 +276,7 @@ This is just a list of things we might want to specify or figure out.
 
 * Should we add a rationale for why SCIM was considered?
 * Is there a way to find if a User object is the primary account of person?
-  Could the presense of `.eduPersonPrincipalName` be it?
+  Could the presence of `.eduPersonPrincipalName` be it?
 * Is there any value in using the `.enterprise` extension here?
   We could just add the attributes we need to the `.no:edu:scim:user` object.
 * Is `"no:edu:scim:user"` a suitable extension scheme name?
