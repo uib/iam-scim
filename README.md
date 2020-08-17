@@ -131,7 +131,7 @@ mandatory for primary accounts.  Example value:
 ```
 
 These attributes should be latinified versions of the name of the person.
-If different the original navtive name of the person can be represented by the
+If different, the original native name of the person can be represented by the
 non-standard attributes `nativeFormatted`, `nativeFamilyName`, `nativeGivenName`.
 
 ### User `.active`
