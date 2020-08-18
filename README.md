@@ -22,7 +22,7 @@ the owner of multiple accounts.  We also consider one of these accounts as this
 person's primary account.  The User objects of the primary account will have a
 mix of attributes describing the account and attributes describing the person.
 
-We might also have accounts that doesn't belong to any person. This might
+We might also have accounts that don't belong to any person. This might
 be accounts representing devices, applications or other systems.
 
 
