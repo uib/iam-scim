@@ -48,7 +48,7 @@ The following fields should minimally be provided on user objects.
 * `.name.givenName`
 * `.name.familyName`
 * `.emails[].type == "work"` with a corresponding `.value`
-* `.enterprise.employeeNumber`
+* `.no:edu:scim:user.employeeNumber`
 * `.no:edu:scim:user.eduPersonPrincipalName`
 * `.no:edu:scim:user.userPrincipalName`
 

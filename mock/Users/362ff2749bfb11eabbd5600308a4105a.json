@@ -1,8 +1,8 @@
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-        "no:edu:scim:user"
+        "no:edu:scim:user",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
     ],
     "id": "362ff2749bfb11eabbd5600308a4105a",
     "meta": {
@@ -45,6 +45,14 @@
     "roles": [
         "staff", "student"
     ],
+    "no:edu:scim:user": {
+        "accountType": "primary",
+        "employeeNumber":333355,
+        "studentNumber": 12345,
+        "fsPersonNumber": 67890,
+        "eduPersonPrincipalName": "gaa041@uib.no",
+        "userPrincipalName": "Gisle.Aas@uib.no"
+    },
     "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
         "employeeNumber": "333355",
         "costCenter": "221013",
@@ -55,9 +63,5 @@
             "id": "452ff2749bfb11eabbd5600308a4105a",
             "displayName": "Nina Kaurel"
         }
-    },
-    "no:edu:scim:user": {
-        "eduPersonPrincipalName": "gaa041@uib.no",
-        "userPrincipalName": "Gisle.Aas@uib.no"
     }
 }
