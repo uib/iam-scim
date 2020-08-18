@@ -79,6 +79,9 @@ Example topic for the message is "no.uib.iga.scim.user.modify".
 This section expands on the minimal requirements and define some features that
 might be useful and that we prefer all implementations to consider.
 
+* Implement `/Users?employeeNumber=...`
+* Implement `/Users?studentNumber=...`
+* Implement `/Users?fsPersonNumber=...`
 * Implement functional `/Groups` and `/Groups/{id}` that expose the same groups available from LDAP/AD.
 * More attributes on user objects, especially `.phoneNumbers` and `.enterprise.manager`.
 * Search for users by name and other attributes.
@@ -249,6 +252,26 @@ Example value:
 This attribute contains the object where we extend the user object with
 fields specific to Norwegian UH domain. The string is also the name
 of a schema and should be found in the `.schemas` attribute as well.
+
+### User `.no:edu:scim:user.employeeNumber`
+
+### User `.no:edu:scim:user.studentNumber`
+
+### User `.no:edu:scim:user.fsPersonNumber`
+
+### User `.no:edu:scim:alternativeIdentifiers`
+
+Alternative — Array of type/value objects.
+
+Example value:
+
+```
+[
+    { "type": "employee_number",  "value": 1234 },
+    { "type": "student_number",   "value": 567 },
+    { "type": "fs_person_number", "value": 890 },
+]
+```
 
 ### User `.no:edu:scim:user.eduPersonPrincipalName`
 
