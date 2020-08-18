@@ -201,6 +201,52 @@ list of roles might be extended later.
 Universities can introduce private roles by prefixing them with
 their reverse domain name, e.g. "no.uib.breiflabb".
 
+### User `.no:edu:scim:user`
+
+This attribute contains the object where we extend the user object with
+fields specific to Norwegian UH domain. The string is also the name
+of a schema and should be found in the `.schemas` attribute as well.
+
+### User `.no:edu:scim:user.employeeNumber`
+
+### User `.no:edu:scim:user.studentNumber`
+
+### User `.no:edu:scim:user.fsPersonNumber`
+
+### User `.no:edu:scim:alternativeIdentifiers`
+
+Alternative — Array of type/value objects.
+
+Example value:
+
+```
+[
+    { "type": "employee_number",  "value": 1234 },
+    { "type": "student_number",   "value": 567 },
+    { "type": "fs_person_number", "value": 890 },
+]
+```
+
+### User `.no:edu:scim:user.eduPersonPrincipalName`
+
+The Feide-ID of this user account is specified in this field.
+This field is absent for accounts not available through Feide.
+
+It will have the same value as the `eduPersonPrincipalName` attribute
+in LDAP and specified [norEdu\*](https://docs.feide.no/reference/schema/attributes/edupersonprincipalname.html#saml-attribute-edupersonprincipalname).
+
+Example value: `gaa041@uib.no`
+
+### User `.no:edu:scim:user.userPrincipalName`
+
+This is the login name for Microsoft login.
+This is the same attribute as `userPrincipalName` in AD and Azure AD.
+
+It would be a good idea for this value to be the same as `.eduPersonPrincipalName`
+but UiB has unfortunately diverged.
+
+Example value: `Gisle.Aas@uib.no`
+
 ### User `.enterprise`
 
 This is the standard SCIM enterprise extension object.
@@ -247,51 +293,6 @@ Example value:
 }
 ```
 
-### User `.no:edu:scim:user`
-
-This attribute contains the object where we extend the user object with
-fields specific to Norwegian UH domain. The string is also the name
-of a schema and should be found in the `.schemas` attribute as well.
-
-### User `.no:edu:scim:user.employeeNumber`
-
-### User `.no:edu:scim:user.studentNumber`
-
-### User `.no:edu:scim:user.fsPersonNumber`
-
-### User `.no:edu:scim:alternativeIdentifiers`
-
-Alternative — Array of type/value objects.
-
-Example value:
-
-```
-[
-    { "type": "employee_number",  "value": 1234 },
-    { "type": "student_number",   "value": 567 },
-    { "type": "fs_person_number", "value": 890 },
-]
-```
-
-### User `.no:edu:scim:user.eduPersonPrincipalName`
-
-The Feide-ID of this user account is specified in this field.
-This field is absent for accounts not available through Feide.
-
-It will have the same value as the `eduPersonPrincipalName` attribute
-in LDAP and specified [norEdu\*](https://docs.feide.no/reference/schema/attributes/edupersonprincipalname.html#saml-attribute-edupersonprincipalname).
-
-Example value: `gaa041@uib.no`
-
-### User `.no:edu:scim:user.userPrincipalName`
-
-This is the login name for Microsoft login.
-This is the same attribute as `userPrincipalName` in AD and Azure AD.
-
-It would be a good idea for this value to be the same as `.eduPersonPrincipalName`
-but UiB has unfortunately diverged.
-
-Example value: `Gisle.Aas@uib.no`
 
 ## Open questions
 
