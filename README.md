@@ -41,7 +41,7 @@ The following fields should minimally be provided on user objects.
 
 * `.id`
 * `.meta`
-* `.username`
+* `.userName`
 * `.active`
 * `.displayName`
 * `.name.formatted`
@@ -90,7 +90,7 @@ might be useful and that we prefer all implementations to consider.
 ### User `.id`
 
 This should preferably be UUID-style string, but the service is free to
-use other formats, like letting the `.username` be the `.id`.  It should be possible
+use other formats, like letting the `.userName` be the `.id`.  It should be possible
 to request the JSON object representing this user with an URL-path of `/Users/{id}`
 where the `{id}` is replaced by the value of this field.
 
@@ -98,13 +98,13 @@ where the `{id}` is replaced by the value of this field.
 
 Standard SCIM meta information on this object.
 
-### User `.username`
+### User `.userName`
 
 The format of the username value should be `{local-username}@{fqdn}`.  SCIM allows
 bare usernames, as well as usernames qualified with a domain. For consistency we always
 return fully qualified names.
 
-This attribute is unique; no other User object will have the same `.username`.
+This attribute is unique; no other User object will have the same `.userName`.
 
 The `{local-username}` part must fully match the regexp pattern `/[a-z][a-z0-9]{0,11}/`
 and the full name will only contain lower case letters.
