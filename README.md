@@ -207,6 +207,20 @@ This attribute contains the object where we extend the user object with
 fields specific to Norwegian UH domain. The string is also the name
 of a schema and should be found in the `.schemas` attribute as well.
 
+
+### User `.no:edu:scim:user.accountType`
+
+Describe what kind of account this is.
+The value is "primary" for the primary account of a person.
+There can only be a single primary account.
+
+The value is "admin" for accounts to be used for privileged access and other
+administrative puposes.
+
+The value is "test" for accounts that is used for testing only.
+
+The value is "rpa" for accounts used by automation scripts.
+
 ### User `.no:edu:scim:user.employeeNumber`
 
 ### User `.no:edu:scim:user.studentNumber`
