@@ -16,7 +16,7 @@ SCIM is basically designed as a REST-style replacement for LDAP.  As such it
 has the same ambiguity on what the User objects represents — are they people or
 are they accounts that belong to people (and other entities).
 
-Here we declare them to be _accounts_ and we suggest that we might extend our
+In this context we declare them to be _accounts_ and we suggest that we might extend our
 SCIM implementation with _Person_ objects later. In this model a person might be
 the owner of multiple accounts.  We also consider one of these accounts as this
 person's primary account.  The User objects of the primary account will have a
