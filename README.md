@@ -213,20 +213,6 @@ of a schema and should be found in the `.schemas` attribute as well.
 
 ### User `.no:edu:scim:user.fsPersonNumber`
 
-### User `.no:edu:scim:alternativeIdentifiers`
-
-Alternative — Array of type/value objects.
-
-Example value:
-
-```
-[
-    { "type": "employee_number",  "value": 1234 },
-    { "type": "student_number",   "value": 567 },
-    { "type": "fs_person_number", "value": 890 },
-]
-```
-
 ### User `.no:edu:scim:user.eduPersonPrincipalName`
 
 The Feide-ID of this user account is specified in this field.
