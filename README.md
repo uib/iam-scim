@@ -31,9 +31,9 @@ be accounts representing devices, applications or other systems.
 This section defines what the lazy implementer might get away with.
 
 * Implement `/Users` with ability to page through the available accounts. An implementation might choose to just expose the Feide-enabled accounts.
+* Implement `/Users/{id}` fetch data for the specified account.
 * Implement `/Users?filter=userName eq "..."` to make it possible to look up a specific account.
 * Implement `/Users?userName=...` as a more convenient non-standard version of the same.
-* Implement `/Users/{id}` fetch data for the specified account.
 * Make `/Groups` functional, but it's fine for it to just return the empty `ListResponse`.
 * Post MQ message when a user object is created, modified or deleted.
 
