@@ -251,12 +251,15 @@ Example value: `Gisle.Aas@uib.no`
 
 This is the standard SCIM enterprise extension object.
 The real full name of this attribute is `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User`
-but we shortened it in this description to `.enterprise`.
+but we shortened references to it in this description to `.enterprise`. The wire protocol
+will use the full name.
+
+Implementations are not required to provide this extension.
 
 ### User `.enterprise.employeeNumber`
 
 This is the DFØ ID for the employee that owns this account.
-This field isn't present for student-only accounts.
+If both are present, this should have the same value as `.no:edu:scim:user.employeeNumber`.
 
 ### User `.enterprise.costCenter`
 
