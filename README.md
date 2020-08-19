@@ -168,7 +168,7 @@ Example value:
 ### User `.phoneNumbers`
 
 The public phone numbers associated with this account.  The phone numbers are
-tagged with a type filed. The tag "work" used for preferred contact option.  The
+tagged with a type field. The tag "work" used for preferred contact option.  The
 tag "mobile" can be used when the mobile phone is not the preferred option.
 The tag "secure" is a phone suitable for use as 2nd-factor verification (via SMS).
 
@@ -224,9 +224,18 @@ The value is "rpa" for accounts used by automation scripts.
 
 ### User `.no:edu:scim:user.employeeNumber`
 
+This is the DFØ ID for the employee that owns this account.
+Only present for primary accounts.
+
 ### User `.no:edu:scim:user.studentNumber`
 
+This is the student number for the person that owns this account.
+Only present for primary accounts.
+
 ### User `.no:edu:scim:user.fsPersonNumber`
+
+This is the FS ID (personløpenummer) for the person that owns this account.
+This field can only be present for primary accounts.
 
 ### User `.no:edu:scim:user.eduPersonPrincipalName`
 
