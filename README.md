@@ -83,6 +83,7 @@ might be useful and that we prefer all implementations to consider.
 * Implement `/Users?employeeNumber=...`
 * Implement `/Users?studentNumber=...`
 * Implement `/Users?fsPersonNumber=...`
+* Implement `/Users?norEduPersonNIN=...`
 * Implement functional `/Groups` and `/Groups/{id}` that expose the same groups available from LDAP/AD.
 * More attributes on user objects, especially `.phoneNumbers` and `.enterprise.manager`.
 * Search for users by name and other attributes.
@@ -236,6 +237,15 @@ Only present for primary accounts.
 
 This is the FS ID (personløpenummer) for the person that owns this account.
 This field can only be present for primary accounts.
+
+### User `.no:edu:scim:user.norEduPersonNIN`
+
+This is the Norwegian "fødselsnummer" for the person that owns this account.
+The identifier can be a real NIN, a D-number og S-number.
+This field can only be present for primary accounts.
+
+This attribute value should only be passed out to applications with
+special reasons to require this.
 
 ### User `.no:edu:scim:user.eduPersonPrincipalName`
 
