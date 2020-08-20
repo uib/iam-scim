@@ -244,7 +244,7 @@ This is the Norwegian "fødselsnummer" for the person that owns this account.
 The identifier can be a real NIN, a D-number og S-number.
 This field can only be present for primary accounts.
 
-This attribute value should only be passed out to applications with
+This attribute value is somewhat confidential and should only be passed to clients with
 special reasons to require this.
 
 ### User `.no:edu:scim:user.eduPersonPrincipalName`
