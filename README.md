@@ -1,4 +1,4 @@
-# SCIM
+# UH-IAM SCIM
 
 This defines the proposed [SCIM](https://tools.ietf.org/html/rfc7643) interface to be provided by IGA
 implementations in the Norwegian higher education sector. The main use case for this API is to provide
