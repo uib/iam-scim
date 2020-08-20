@@ -214,7 +214,7 @@ of a schema and should be found in the `.schemas` attribute as well.
 
 Describe what kind of account this is.
 The value is "primary" for the primary account of a person.
-There can only be a single primary account.
+Each person can only have a single primary account.
 
 The value is "admin" for accounts to be used for privileged access and other
 administrative puposes.
