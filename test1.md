@@ -105,7 +105,7 @@ The data attributes required for the test are:
 * `no:edu:scim:user.employeeNumber`: Obtained from the {id} field in the ansatte object from DFØ
 * `no:edu:scim:user.eduPersonPrincipalName`: aka feide-id. Can use {userName}@uib.no for now
 
-This is an example of a valid `GET /User/{id}` response:
+This is an example of a valid `GET /Users/{id}` response:
 
 ```
 {
