@@ -1,0 +1,90 @@
+# IGA behaviour in BOTT DFØ integration test
+
+This document describes the expected behaviour of the IGA in order to successfully complete
+the first BOTT DFØ integration test.
+
+In the description below we assume the IGA store people, affiliations, and account objects.
+
+The account objects will be connected to a person and store the allocated username.
+Email-address and feide-id can be derived from the username.
+
+The IGA can start out with an empty database and only store people and affiliations as
+events are received from DFØ.
+
+## Infrastructure
+
+Messages will be delivered to the IntArk Rabbit MQ vhost provided by the university. Messages
+emited should be delivered to the `ex_from_iga` exchange in the same vhost.
+
+The SCIM API will be exposed over the university's IntArk API gateway.
+
+The DFØ API will be accessed at the university's IntArk API gateway.
+
+## Listen for messages from DFØ
+
+There are two kind of messages to process from DFØ.
+
+```
+'ansatte'    => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '101926', 'uri': 'dfo:ansatte'}
+'stillinger' => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '30001233', 'uri': 'dfo:stillinger'}
+```
+
+These messages indicates that an employee or a position has changed.
+An employee object in DFØ describes a person.
+An position object in DFØ describes a job to be done within the organisation and which people
+have this postion in which time intervall. Multiple people can have the same position at any
+given time.
+
+### Behaviour when receiving messages:
+
+When the IGA receives the message about ansatt (employee in English):
+
+* If we don't store a record for employee {id}, ignore the message
+* otherwise request the resource `GET /dfo/ansatte/{id}`
+* Compare response with the data we have stored. If anything has
+  changed update and propegate change thoughout iga.
+* If the change involves any of the attributes exposed
+  in SCIM emit update message.
+
+When the IGA received the message about stilling (postion in English):
+
+* request the position resource `GET /dfo/stillinger/{id}`
+* if we knew about this position before, compare with old
+  to discover if any people have been removed.
+* fetch all referenced employees we don't have a record on before;
+  `GET /dfo/ansatte/{innehaverAnsattnr}` and store them.
+* save enough about the position to be able to figure out when people are removed next time
+  something happens with this position.
+* Create/update affiliations based on the fetched position.
+* Remove affiliations that are gone.
+
+## Internal IGA events
+
+An affliations is removed:
+
+* Treat it as if the _affiliation end date ended_.
+
+An affliation is created:
+
+* Check if the start date has passed, if so treat it
+as if the _affiliation start date started_.
+
+An affliation has been updated:
+
+* Calculate if the person should have an account based on the
+  set of active affliations.
+* If so and no user account exist create one (emit SCIM create message)
+* If not and user has active account block the account (sets `active = false`) (emit SCIM update message)
+
+
+Affliation start date starts:
+
+* Calculate if the person should have an account based on the
+  set of active affliations.
+* If so and no user account exist create one (emit SCIM create message)
+
+Affliation end date ends:
+
+* Calculate if the person should have an account based on the
+  set of active affliations.
+* If not and no user account exist block the account (sets `active = false`) (emit SCIM update message)
