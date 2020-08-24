@@ -105,6 +105,37 @@ The data attributes required for the test are:
 * `no:edu:scim:user.employeeNumber`: Obtained from the {id} field in the ansatte object from DFØ
 * `no:edu:scim:user.eduPersonPrincipalName`: aka feide-id. Can use {userName}@uib.no for now
 
+This is an example of a valid `GET /User/{id}` response:
+
+```
+{
+    "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+    ],
+    "id": "362ff2749bfb11eabbd5600308a4105a",
+    "meta": {
+        "resourceType": "User",
+        "created": "2010-01-23T04:56:22Z",
+        "lastModified": "2020-06-22T06:42:34Z"
+    },
+    "username": "gaa041@uib.no",
+    "displayName": "Gisle Aas",
+    "active": true,
+    "emails": [
+        {
+            "value": "gaa041@uib.no",
+            "type": "work"
+        },
+    ],
+    "no:edu:scim:user": {
+        "accountType": "primary",
+        "employeeNumber":333355,
+        "eduPersonPrincipalName": "gaa041@uib.no",
+    }
+}
+```
+
 The format for the messages to be emitted is described in the [README](README.md). It basically looks like this:
 
 ```
