@@ -13,20 +13,21 @@ events are received from DFØ.
 
 ## Infrastructure
 
-Messages will be delivered to the IntArk Rabbit MQ vhost provided by the university. Messages
-emited should be delivered to the `ex_from_iga` exchange in the same vhost.
+Messages will be delivered to the IntArk Rabbit MQ vhost provided by the
+university, at the `ex_from_dfo` exchange. Messages emited should be delivered
+to the `ex_from_iga` exchange in the same vhost.
 
 The SCIM API will be exposed over the university's IntArk API gateway.
 
-The DFØ API will be accessed at the university's IntArk API gateway.
+The DFØ API will be accessed from the university's IntArk API gateway.
 
 ## Listen for messages from DFØ
 
 There are two kind of messages to process from DFØ.
 
 ```
-'ansatte'    => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '101926', 'uri': 'dfo:ansatte'}
-'stillinger' => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '30001233', 'uri': 'dfo:stillinger'}
+Topic: ansatte    => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '101926', 'uri': 'dfo:ansatte'}
+Topic: stillinger => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '30001233', 'uri': 'dfo:stillinger'}
 ```
 
 These messages indicates that an employee or a position has changed.
@@ -103,3 +104,21 @@ The data attributes required for the test are:
 * `no:edu:scim:user.accountType`: Set to "primary"
 * `no:edu:scim:user.employeeNumber`: Obtained from the {id} field in the ansatte object from DFØ
 * `no:edu:scim:user.eduPersonPrincipalName`: aka feide-id. Can use {userName}@uib.no for now
+
+The format for the messages to be emitted is described in the [README](README.md). It basically looks like this:
+
+```
+{
+  "schemas: ["urn:ietf:params:scim:schemas:notify:2.0:Event"],
+  "resourceUris": [
+     "https://gw-uib.intark.uh-it.no/iga/scim/v2/Users/362ff2749bfb11eabbd5600308a4105a"
+  ],
+  "type":"MODIFY",
+  "attributes": ["emails", "name.givenName", "no:edu:scim:user:userPrincipalName"],
+}
+```
+
+Where "type" is "CREATE" when the account is created.  There is no "attributes" for the create event.
+There must be a place for to configure the prefix to use for the "resourceUri" since it should
+based of the API GW path.
+
