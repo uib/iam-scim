@@ -126,7 +126,7 @@ This is an example of a valid `GET /User/{id}` response:
         {
             "value": "gaa041@uib.no",
             "type": "work"
-        },
+        }
     ],
     "no:edu:scim:user": {
         "accountType": "primary",
