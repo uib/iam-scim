@@ -114,6 +114,8 @@ Affiliation end date ends:
   set of active affiliations.
 * If not and no user account exist block the account (sets `active = false`) (emit SCIM update message)
 
+The calculation referenced above can for now be simplified as "the person has at least one position with an date range that includes today). The only thing required for setting up an account is to generate a account UUID (id) and a random username (any algorithm will do).  No interaction with a real user required.
+
 ## SCIM interface
 
 The accounts are exposed through the [SCIM interface](v01.md).
