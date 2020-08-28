@@ -137,7 +137,7 @@ This is an example of a valid `GET /Users/{id}` response:
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        "no:edu:scim:user"
     ],
     "id": "362ff2749bfb11eabbd5600308a4105a",
     "meta": {
