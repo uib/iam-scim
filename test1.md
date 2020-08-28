@@ -41,7 +41,7 @@ Topic: ansatte
 {
   'firmakode': '9900',
   'gyldigEtter': '20200823',
-  'id': '101926',
+  'id': '00101926',
   'uri': 'dfo:ansatte'
 }
 
@@ -133,7 +133,7 @@ The data attributes required for the test are:
 
 This is an example of a valid `GET /Users/{id}` response:
 
-```
+```json
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
@@ -164,7 +164,7 @@ This is an example of a valid `GET /Users/{id}` response:
 
 The format for the messages to be emitted is described in the [README](README.md). It basically looks like this:
 
-```
+```json
 {
   "schemas: ["urn:ietf:params:scim:schemas:notify:2.0:Event"],
   "resourceUris": [
@@ -179,3 +179,116 @@ Where "type" is "CREATE" when the account is created.  There is no "attributes" 
 There must be a way to configure the prefix to use for the "resourceUri" since it should
 based of the API GW path.
 
+## Appendix: DFØ API
+
+This describes the DFØ API which is documented in Norwegian at the [DFØ developer gateway](https://api-dev.dfo.no).
+This section shows examples of the objects returned and explains the fields required to be processed for the
+test.
+
+This is an example of the position object returned by `GET /stillinger/30001233`
+
+```json
+{
+  "stilling": {
+    "id": 30001233,
+    "stillingsnavn": "1434 Rådgiver",
+    "stillingskode": 20001434,
+    "stillingstittel": "1434 Rådgiver",
+    "orgenhet": 10000087,
+    "yrkeskode": "2411 107",
+    "yrkeskodetekst": "RÅDGIVER (ØKONOMI OG SAMFUNNSVITENSKAP, OFFENTLIG ADMINISTRA",
+    "innehaver": [
+      {
+        "innehaverAnsattnr": "00101264",
+        "innehaverStartdato": "2020-01-01",
+        "innehaverSluttdato": "9999-12-31"
+      },
+      {
+        "innehaverAnsattnr": "00101557",
+        "innehaverStartdato": "2020-07-01",
+        "innehaverSluttdato": "9999-12-31"
+      },
+      {
+        "innehaverAnsattnr": "00101640",
+        "innehaverStartdato": "2020-06-02",
+        "innehaverSluttdato": "9999-12-31"
+      },
+      {
+        "innehaverAnsattnr": "00101649",
+        "innehaverStartdato": "2020-06-01",
+        "innehaverSluttdato": "9999-12-31"
+      },
+      {
+        "innehaverAnsattnr": "00101651",
+        "innehaverStartdato": "2020-05-01",
+        "innehaverSluttdato": "9999-12-31"
+      }
+    ]
+  }
+}
+```
+
+For the test the only thing required to process is the set of people in this
+position and the date ranges when the affliation is valid.  The reference to
+the employee is found in the `innehaverAnsattnr` field, and the start/end dates
+are the `innehaverStartdato` and `innehaverSluttdato` fields.
+
+When there is only one `innehaver` the list is unwrapped. This is not the
+documented behaviour and might change in the future.  When there is zero, you
+get `null` instead of an empty list.
+
+This is an example of the employee object returned by `GET /ansatte/00101926`
+
+```json
+{
+  "ansatt": {
+    "id": "00101926",
+    "dfoBrukerident": null,
+    "eksternIdent": null,
+    "fornavn": "Lise",
+    "etternavn": "Orre",
+    "fnr": "01066001942",
+    "annenId": null,
+    "fdato": "1960-06-01",
+    "kjonn": "M",
+    "sakarkivnr": null,
+    "landkode": "NO",
+    "medarbeidergruppe": "4",
+    "medarbeiderundergruppe": "04",
+    "startdato": "2020-01-01",
+    "sluttdato": "9999-12-31",
+    "sluttarsak": null,
+    "stillingId": 30001225,
+    "dellonnsprosent": "100.00",
+    "bevilgning": null,
+    "kostnadssted": "80",
+    "organisasjonId": 10000085,
+    "jurBedriftsnummer": 912345678,
+    "tilleggsstilling": null,
+    "lederflagg": false,
+    "portaltilgang": true,
+    "turnustilgang": false,
+    "eksternbruker": false,
+    "epost": "TRINE.HUSEBO@DFO.NO",
+    "privatTelefonnummer": null,
+    "telefonnummer": null,
+    "mobilnummer": null,
+    "mobilPrivat": "4792493522",
+    "privatPostadresse": "Dyreparkvegen 17",
+    "privatPostnr": "4344",
+    "privatPoststed": "BRYNE",
+    "endretDato": "2020-08-21",
+    "endretAv": "RFCUSER"
+  }
+}
+```
+
+The only thing required to fetch from this record is the name of
+the person.  The `id` is the employeeNumber.  The `fornavn` and `etternavn`
+fields are the givenName and lastName of the person.  The concatenation of them
+is to be set as the `displayName` in SCIM.
+
+The `fnr` field is the Norwegian NIN (or D-number) of the person, but numbers
+that end with '00000', '00100', '00200' are test numbers and are not garanteed
+to be unique — these should be ignored.  There is nothing in this test that requires
+processing of the `fnr` field.
