@@ -26,8 +26,21 @@ The DFØ API will be accessed from the university's IntArk API gateway.
 There are two kind of messages to process from DFØ.
 
 ```
-Topic: ansatte:   => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '101926', 'uri': 'dfo:ansatte'}
-Topic: stillinger => {'firmakode': '9900', 'gyldigEtter': '20200823', 'id': '30001233', 'uri': 'dfo:stillinger'}
+Topic: ansatte
+{
+  'firmakode': '9900',
+  'gyldigEtter': '20200823',
+  'id': '101926',
+  'uri': 'dfo:ansatte'
+}
+
+Topic: stillinger
+{
+  'firmakode': '9900',
+  'gyldigEtter': '20200823',
+  'id': '30001233',
+  'uri': 'dfo:stillinger'
+}
 ```
 
 These messages indicates that an employee or a position has changed.
