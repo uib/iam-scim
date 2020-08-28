@@ -1,7 +1,7 @@
 # IGA behaviour in BOTT DFØ integration test
 
 This document describes the expected behaviour of the IGA in order to successfully complete
-the first BOTT DFØ integration test.
+the first BOTT DFØ integration test scheduled for mid September 2020.
 
 In the description below we assume the IGA store people, affiliations, and account objects.
 
