@@ -176,6 +176,6 @@ The format for the messages to be emitted is described in the [README](README.md
 ```
 
 Where "type" is "CREATE" when the account is created.  There is no "attributes" for the create event.
-There must be a place for to configure the prefix to use for the "resourceUri" since it should
+There must be a way to configure the prefix to use for the "resourceUri" since it should
 based of the API GW path.
 
