@@ -58,11 +58,14 @@ There are two kind of messages to process from DFØ.
 }
 ```
 
-These messages indicates that an employee or a position has changed.
+These messages indicates that an employee or a position has changed.  The only
+thing required to extract from these is the `id` of the object in question.
+Use either the message topic or the `uri` field to know which API to call.
+
 An employee object in DFØ describes a person.
 An position object in DFØ describes a job to be done within the organisation and which people
 have this position in which time interval. Multiple people can have the same position at any
-given time.
+given time.  See appendix below for examples of the objects.
 
 ### Behaviour when receiving messages:
 
