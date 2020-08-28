@@ -85,7 +85,7 @@ When the IGA received the message about stilling (position in English):
 
 ## Internal IGA events
 
-An affiliations is removed:
+An affiliation is removed:
 
 * Treat it as if the _affiliation end date ended_.
 
