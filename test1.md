@@ -128,7 +128,7 @@ The data attributes required for the test are:
 * `displayName`: Obtained from person as the concatenation of the first name and last name
 * `emails.WORK`: Can use {userName}@uib.no for now
 * `no:edu:scim:user.accountType`: Set to "primary"
-* `no:edu:scim:user.employeeNumber`: Obtained from the {id} field in the ansatte object from DFØ
+* `no:edu:scim:user.employeeNumber`: Obtained from the {id} field in the ansatte object from DFØ, but only exposed when the user has an active affiliation with DFØ.
 * `no:edu:scim:user.eduPersonPrincipalName`: aka feide-id. Can use {userName}@uib.no for now
 
 This is an example of a valid `GET /Users/{id}` response:
