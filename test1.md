@@ -36,7 +36,7 @@ The overall information flow we expect to demonstrate is:
 
 There are two kind of messages to process from DFØ.
 
-Topic: ansatte
+**Topic:** ansatte
 
 ```json
 {
@@ -45,8 +45,9 @@ Topic: ansatte
   'id': '00101926',
   'uri': 'dfo:ansatte'
 }
+```
 
-Topic: stillinger
+**Topic:** stillinger
 
 ```json
 {
