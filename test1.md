@@ -40,10 +40,10 @@ There are two kind of messages to process from DFØ.
 
 ```json
 {
-  'firmakode': '9900',
-  'gyldigEtter': '20200823',
-  'id': '00101926',
-  'uri': 'dfo:ansatte'
+  "firmakode": "9900",
+  "gyldigEtter": "20200823",
+  "id": "00101926",
+  "uri": "dfo:ansatte"
 }
 ```
 
@@ -51,10 +51,10 @@ There are two kind of messages to process from DFØ.
 
 ```json
 {
-  'firmakode': '9900',
-  'gyldigEtter': '20200823',
-  'id': '30001233',
-  'uri': 'dfo:stillinger'
+  "firmakode": "9900",
+  "gyldigEtter": "20200823",
+  "id": "30001233",
+  "uri": "dfo:stillinger"
 }
 ```
 
