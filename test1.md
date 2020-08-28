@@ -36,8 +36,9 @@ The overall information flow we expect to demonstrate is:
 
 There are two kind of messages to process from DFØ.
 
-```
 Topic: ansatte
+
+```json
 {
   'firmakode': '9900',
   'gyldigEtter': '20200823',
@@ -46,6 +47,8 @@ Topic: ansatte
 }
 
 Topic: stillinger
+
+```json
 {
   'firmakode': '9900',
   'gyldigEtter': '20200823',
