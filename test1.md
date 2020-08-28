@@ -21,6 +21,17 @@ The SCIM API will be exposed over the university's IntArk API gateway.
 
 The DFØ API will be accessed from the university's IntArk API gateway.
 
+![Diagram showing flow from DFØ to IGA](flow.png)
+
+The overall information flow we expect to demonstrate is:
+
+1. Messages emitted from DFØ when something happens with employee or position objects
+2. Messages received by IGA-connector (format described below)
+3. IGA-connector fetches data as it reacts to messages (API documented at [api-dev.dfo.no](https://api-dev.dfo.no))
+4. Messages emitted from IGA when account objects are created or updated (format described below)
+5. Messages received by DFØ-connector
+6. DFØ-connector fetches Feide-ID and e-mail address from IGA (API is subset of SCIM described below)
+
 ## Listen for messages from DFØ
 
 There are two kind of messages to process from DFØ.
