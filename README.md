@@ -62,14 +62,14 @@ Since IntArk prefers shallow messages, we don't include the `.values` attribute.
 
 These events are encoded in JSON and looks like this:
 
-```
+```json
 {
-  "schemas: ["urn:ietf:params:scim:schemas:notify:2.0:Event"],
+  "schemas": ["urn:ietf:params:scim:schemas:notify:2.0:Event"],
   "resourceUris": [
      "https://gw-uib.intark.uh-it.no/iga/scim/v2/Users/362ff2749bfb11eabbd5600308a4105a"
   ],
   "type":"MODIFY",
-  "attributes": ["emails", "name.givenName", "no:edu:scim:user:userPrincipalName"],
+  "attributes": ["emails", "name.givenName", "no:edu:scim:user:userPrincipalName"]
 }
 ```
 
@@ -127,7 +127,7 @@ explaining the purpose of this account.
 This is the name of the owner of this account.  This attribute is
 mandatory for primary accounts.  Example value:
 
-```
+```json
 {
     "formatted": "Gisle Aas",
     "familyName": "Aas",
@@ -158,7 +158,8 @@ tagged with a type field.  The tag "work" is used for the main email address,
 even for students.
 
 Example value:
-```
+
+```json
 [
     { "type": "work",     "value": "Gisle.Aas@uib.no" },
     { "type": "internal", "value": "gaa041@uib.no" },
@@ -178,7 +179,7 @@ prefixed with "+" and without internal spaces or dashes.
 
 Example value:
 
-```
+```json
 [
     { "type": "work",    "value": "+4793241450" },
     { "type": "secure",  "value": "+4793241450" },
@@ -309,7 +310,8 @@ Additional information on the manager can be obtained from `/Users/{enterprise.m
 The `.enterprise.manager.displayName` is just a copy of the `.displayName` of the manager account itself.
 
 Example value:
-```
+
+```json
 {
     "id": "452ff2749bfb11eabbd5600308a4105a",
     "displayName": "Nina Kaurel"
