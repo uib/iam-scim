@@ -173,12 +173,18 @@ The format for the messages to be emitted is described in the [README](README.md
 
 ```json
 {
-  "schemas: ["urn:ietf:params:scim:schemas:notify:2.0:Event"],
-  "resourceUris": [
-     "https://gw-uib.intark.uh-it.no/iga/scim/v2/Users/362ff2749bfb11eabbd5600308a4105a"
+  "schemas": [
+    "urn:ietf:params:scim:schemas:notify:2.0:Event"
   ],
-  "type":"MODIFY",
-  "attributes": ["emails", "name.givenName", "no:edu:scim:user:userPrincipalName"],
+  "resourceUris": [
+    "https://gw-uib.intark.uh-it.no/iga/scim/v2/Users/362ff2749bfb11eabbd5600308a4105a"
+  ],
+  "type": "MODIFY",
+  "attributes": [
+    "emails",
+    "name.givenName",
+    "no:edu:scim:user:userPrincipalName"
+  ]
 }
 ```
 
