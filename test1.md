@@ -304,4 +304,5 @@ is to be set as the `displayName` in SCIM.
 The `fnr` field is the Norwegian NIN (or D-number) of the person, but numbers
 that end with '00000', '00100', '00200' are test numbers and are not garanteed
 to be unique — these should be ignored.  There is nothing in this test that requires
-processing of the `fnr` field.
+processing of the `fnr` field, but it will be used later to connect people obtained
+from FS.
