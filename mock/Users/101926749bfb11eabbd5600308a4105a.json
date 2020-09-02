@@ -1,0 +1,36 @@
+{
+    "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "no:edu:scim:user"
+    ],
+    "id": "101926749bfb11eabbd5600308a4105a",
+    "meta": {
+        "resourceType": "User",
+        "created": "2010-01-23T04:56:22Z",
+        "lastModified": "2020-06-22T06:42:34Z"
+    },
+    "username": "lior1234@uib.no",
+    "externalId": "101926a49bfb11eaffff600308a4105a",
+    "name": {
+        "formatted": "Lisa Orre",
+        "familyName": "Orre",
+        "givenName": "Lisa"
+    },
+    "displayName": "Lisa Orre",
+    "active": true,
+    "emails": [
+        {
+            "value": "lisa.orre@uib.no",
+            "type": "work"
+        }
+    ],
+    "roles": [
+        "staff", "student"
+    ],
+    "no:edu:scim:user": {
+        "accountType": "primary",
+        "employeeNumber":101926,
+        "eduPersonPrincipalName": "lior1234@uib.no",
+        "userPrincipalName": "Lisa.Orre@uib.no"
+    }
+}
