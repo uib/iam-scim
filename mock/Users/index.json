@@ -1,6 +1,6 @@
 {
     "schemas":["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
-    "totalResults": 2,
+    "totalResults": 3,
     "Resources": [
         { "id": "362ff2749bfb11eabbd5600308a4105a" },
         { "id": "363fe2749bfb11eabbc5600408a4106b" },
