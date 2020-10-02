@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: SCIM
+  version: '0.2'
+servers:
+  - url: 'https://gw-uib.intark.uh-it.no/iga/scim/v1'
+    description: test
+  - url: 'https://gw-uib.intark.uh-it.no/iga/scim/test'
+    description: test
+paths:
+  /Users:
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  schemas:
+                    type: array
+                    items:
+                      type: string
+                      example: 'urn:ietf:params:scim:api:messages:2.0:ListResponse'
+                  totalResults:
+                    type: integer
+                  Resources:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+  '/Users/{id}':
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        example: 362ff2749bfb11eabbd5600308a4105a
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
