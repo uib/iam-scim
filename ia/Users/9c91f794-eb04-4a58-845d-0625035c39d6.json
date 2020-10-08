@@ -1,0 +1,26 @@
+{
+    "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "no:edu:scim:user"
+    ],
+    "id": "9c91f794-eb04-4a58-845d-0625035c39d6",
+    "meta": {
+        "resourceType": "User",
+        "created": "2020-10-06T17:55:48.000Z",
+        "lastModified": "2020-10-06T18:11:36.000Z"
+    },
+    "username": "jokas3918@uib.no",
+    "displayName": "Jonathan Kaspersen",
+    "active": true,
+    "emails": [
+        {
+            "value": "jokas3918@uib.no",
+            "type": "work"
+        }
+    ],
+    "no:edu:scim:user": {
+        "accountType": "primary",
+        "employeeNumber": "00102098",
+        "eduPersonPrincipalName": "jokas3918@uib.no"
+    }
+}

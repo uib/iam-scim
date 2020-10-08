@@ -1,0 +1,3 @@
+Content-Type: application/json
+Routing-Key: uib.ri.test.scim.user.update
+Exchange: ex_from_iga
