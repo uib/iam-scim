@@ -1,0 +1,26 @@
+{
+	"schemas": [
+		"urn:ietf:params:scim:schemas:core:2.0:User",
+		"no:edu:scim:user"
+	],
+	"id": "bf6b228e-2849-4fb6-85db-e39c9265ef58",
+	"meta": {
+		"resourceType": "User",
+		"created": "2020-10-06T17:55:48.000Z",
+		"lastModified": "2020-10-06T18:11:36.000Z"
+	},
+	"username": "mabo9900@uib.no",
+	"displayName": "Maria Bø",
+	"active": true,
+	"emails": [
+		{
+			"value": "mabo9900@uib.no",
+			"type": "work"
+		}
+	],
+	"no:edu:scim:user": {
+		"accountType": "primary",
+		"employeeNumber": "102100",
+		"eduPersonPrincipalName": "mabo9900@uib.no"
+	}
+}
