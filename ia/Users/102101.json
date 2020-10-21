@@ -1,0 +1,26 @@
+{
+	"schemas": [
+		"urn:ietf:params:scim:schemas:core:2.0:User",
+		"no:edu:scim:user"
+	],
+	"id": "d8cc7c97-0080-4d48-858e-5482039d001a",
+	"meta": {
+		"resourceType": "User",
+		"created": "2020-10-06T17:55:48.000Z",
+		"lastModified": "2020-10-06T18:11:36.000Z"
+	},
+	"username": "eabe9900@uib.no",
+	"displayName": "Erik-André Bekkesen",
+	"active": true,
+	"emails": [
+		{
+			"value": "eabe9900@uib.no",
+			"type": "work"
+		}
+	],
+	"no:edu:scim:user": {
+		"accountType": "primary",
+		"employeeNumber": "102101",
+		"eduPersonPrincipalName": "eabe9900@uib.no"
+	}
+}
