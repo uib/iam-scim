@@ -1,0 +1,26 @@
+{
+	"schemas": [
+		"urn:ietf:params:scim:schemas:core:2.0:User",
+		"no:edu:scim:user"
+	],
+	"id": "a8922950-e51b-4364-83c8-64dd92188435",
+	"meta": {
+		"resourceType": "User",
+		"created": "2020-10-06T17:55:48.000Z",
+		"lastModified": "2020-10-06T18:11:36.000Z"
+	},
+	"username": "rupe9900@uib.no",
+	"displayName": "Ruth Pedersen",
+	"active": true,
+	"emails": [
+		{
+			"value": "rupe9900@uib.no",
+			"type": "work"
+		}
+	],
+	"no:edu:scim:user": {
+		"accountType": "primary",
+		"employeeNumber": "102071",
+		"eduPersonPrincipalName": "rupe9900@uib.no"
+	}
+}
