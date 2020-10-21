@@ -1,0 +1,26 @@
+{
+	"schemas": [
+		"urn:ietf:params:scim:schemas:core:2.0:User",
+		"no:edu:scim:user"
+	],
+	"id": "019110f7-6ec7-49ff-b825-8ba8b4a32bc9",
+	"meta": {
+		"resourceType": "User",
+		"created": "2020-10-06T17:55:48.000Z",
+		"lastModified": "2020-10-06T18:11:36.000Z"
+	},
+	"username": "cada9900@uib.no",
+	"displayName": "Camilla Dahl",
+	"active": true,
+	"emails": [
+		{
+			"value": "cada9900@uib.no",
+			"type": "work"
+		}
+	],
+	"no:edu:scim:user": {
+		"accountType": "primary",
+		"employeeNumber": "102073",
+		"eduPersonPrincipalName": "cada9900@uib.no"
+	}
+}
