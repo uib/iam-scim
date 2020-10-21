@@ -1,0 +1,26 @@
+{
+	"schemas": [
+		"urn:ietf:params:scim:schemas:core:2.0:User",
+		"no:edu:scim:user"
+	],
+	"id": "d1bed228-cee6-43b9-b198-c18fc8e51326",
+	"meta": {
+		"resourceType": "User",
+		"created": "2020-10-06T17:55:48.000Z",
+		"lastModified": "2020-10-06T18:11:36.000Z"
+	},
+	"username": "labe9900@uib.no",
+	"displayName": "Lars Bergli",
+	"active": true,
+	"emails": [
+		{
+			"value": "labe9900@uib.no",
+			"type": "work"
+		}
+	],
+	"no:edu:scim:user": {
+		"accountType": "primary",
+		"employeeNumber": "102069",
+		"eduPersonPrincipalName": "labe9900@uib.no"
+	}
+}
